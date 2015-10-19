@@ -8,10 +8,13 @@
 
 import UIKit
 
-class RootViewController: UITableViewController {
+class RootViewController: UITableViewController, AddCelebrityViewControllerDelegate {
     
     var celebs:[Celebrity] = []
     var selectedCeleb: Int?
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,8 @@ class RootViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    
     // MARK: - Table view data source
 
 
@@ -48,4 +53,26 @@ class RootViewController: UITableViewController {
         selectedCeleb = indexPath.row
         self.performSegueWithIdentifier("celebDetailsSegue", sender: indexPath.row)
     }
+    
+    
+    // MARK: - Segue
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "addCelebSegue" {
+            let vc = segue.destinationViewController as! AddCelebrityViewController
+            vc.delegate = self
+        }
+        
+    }
+    
+    // MARK: - Delegate & Protocol 
+    
+    func sendCelebrity(name: String) {
+        let newCeleb = Celebrity(name: name)
+        celebs.append(newCeleb)
+        tableView.reloadData()
+    }
+    
+    
 }
+

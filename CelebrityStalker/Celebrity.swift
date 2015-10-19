@@ -15,4 +15,9 @@ class Celebrity {
     init(name: String) {
         self.name = name
     }
+    
+    
+    func addNewCelebrity(newName: String) {
+        
+    }
 }
