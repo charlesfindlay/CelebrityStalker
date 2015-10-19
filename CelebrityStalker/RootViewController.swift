@@ -11,6 +11,7 @@ import UIKit
 class RootViewController: UITableViewController {
     
     var celebs:[Celebrity] = []
+    var selectedCeleb: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +30,6 @@ class RootViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -44,5 +41,11 @@ class RootViewController: UITableViewController {
         cell?.textLabel?.text = celebs[indexPath.row].name
         
         return cell!
+    }
+    
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selectedCeleb = indexPath.row
+        self.performSegueWithIdentifier("celebDetailsSegue", sender: indexPath.row)
     }
 }
