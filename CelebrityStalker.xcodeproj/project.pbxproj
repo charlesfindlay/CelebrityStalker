@@ -14,6 +14,7 @@
 		3F0ACCDA1BD56AF600E3BDE1 /* Celebrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0ACCD91BD56AF600E3BDE1 /* Celebrity.swift */; settings = {ASSET_TAGS = (); }; };
 		3F0ACCDD1BD56BD500E3BDE1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0ACCDC1BD56BD500E3BDE1 /* RootViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3F0ACCDF1BD575B100E3BDE1 /* AddCelebrityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0ACCDE1BD575B100E3BDE1 /* AddCelebrityViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3FFB72E51BD6C2F3000E3300 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB72E41BD6C2F3000E3300 /* PhotosViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3F0ACCD91BD56AF600E3BDE1 /* Celebrity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Celebrity.swift; sourceTree = "<group>"; };
 		3F0ACCDC1BD56BD500E3BDE1 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		3F0ACCDE1BD575B100E3BDE1 /* AddCelebrityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCelebrityViewController.swift; sourceTree = "<group>"; };
+		3FFB72E41BD6C2F3000E3300 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				3F0ACCDC1BD56BD500E3BDE1 /* RootViewController.swift */,
 				3F0ACCDE1BD575B100E3BDE1 /* AddCelebrityViewController.swift */,
+				3FFB72E41BD6C2F3000E3300 /* PhotosViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				3F0ACCDA1BD56AF600E3BDE1 /* Celebrity.swift in Sources */,
 				3F0ACCC71BD5664400E3BDE1 /* AppDelegate.swift in Sources */,
 				3F0ACCDD1BD56BD500E3BDE1 /* RootViewController.swift in Sources */,
+				3FFB72E51BD6C2F3000E3300 /* PhotosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +311,7 @@
 				3F0ACCD71BD5664400E3BDE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
