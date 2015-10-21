@@ -62,6 +62,10 @@ class RootViewController: UITableViewController, AddCelebrityViewControllerDeleg
             let vc = segue.destinationViewController as! AddCelebrityViewController
             vc.delegate = self
         }
+        if segue.identifier == "celebDetailsSegue"  {
+            let vc = segue.destinationViewController as! CelebrityTabBarController
+            vc.myCelebrity = celebs[selectedCeleb!]
+        }
         
     }
     

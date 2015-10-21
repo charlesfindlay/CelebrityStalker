@@ -35,14 +35,18 @@ class PhotosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let testCeleb = Celebrity(name: "James Franco")
-        myCelebrity = testCeleb
+//        let testCeleb = Celebrity(name: "James Franco")
+//        myCelebrity = testCeleb
+        let tbvc = self.tabBarController as! CelebrityTabBarController
+        myCelebrity = tbvc.myCelebrity
+        
+        celebrityNameLabel.text = myCelebrity.name
         
         // Hardcode the arguments
         let methodArguments: [String: String!] = [
             "method": METHOD_NAME,
             "api_key": API_KEY,
-            "text": "Lionel Ritchie",
+            "text": myCelebrity.name,
             "safe_search": SAFE_SEARCH,
             "extras": EXTRAS,
             "format": DATA_FORMAT,

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23ECEBC11BD825F800F5C74E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23ECEBC01BD825F800F5C74E /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 		3F0ACCC71BD5664400E3BDE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0ACCC61BD5664400E3BDE1 /* AppDelegate.swift */; };
-		3F0ACCCC1BD5664400E3BDE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F0ACCCA1BD5664400E3BDE1 /* Main.storyboard */; };
 		3F0ACCCE1BD5664400E3BDE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0ACCCD1BD5664400E3BDE1 /* Assets.xcassets */; };
 		3F0ACCD11BD5664400E3BDE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F0ACCCF1BD5664400E3BDE1 /* LaunchScreen.storyboard */; };
 		3F0ACCDA1BD56AF600E3BDE1 /* Celebrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0ACCD91BD56AF600E3BDE1 /* Celebrity.swift */; settings = {ASSET_TAGS = (); }; };
@@ -19,9 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23ECEBC01BD825F800F5C74E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../Downloads/Main.storyboard; sourceTree = "<group>"; };
 		3F0ACCC31BD5664400E3BDE1 /* CelebrityStalker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CelebrityStalker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F0ACCC61BD5664400E3BDE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F0ACCCB1BD5664400E3BDE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F0ACCCD1BD5664400E3BDE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F0ACCD01BD5664400E3BDE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F0ACCD21BD5664400E3BDE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,10 +62,10 @@
 		3F0ACCC51BD5664400E3BDE1 /* CelebrityStalker */ = {
 			isa = PBXGroup;
 			children = (
+				23ECEBC01BD825F800F5C74E /* Main.storyboard */,
 				3F0ACCDB1BD56B7C00E3BDE1 /* Controller */,
 				3F0ACCD81BD56AE200E3BDE1 /* Model */,
 				3F0ACCC61BD5664400E3BDE1 /* AppDelegate.swift */,
-				3F0ACCCA1BD5664400E3BDE1 /* Main.storyboard */,
 				3F0ACCCD1BD5664400E3BDE1 /* Assets.xcassets */,
 				3F0ACCCF1BD5664400E3BDE1 /* LaunchScreen.storyboard */,
 				3F0ACCD21BD5664400E3BDE1 /* Info.plist */,
@@ -149,9 +149,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23ECEBC11BD825F800F5C74E /* Main.storyboard in Resources */,
 				3F0ACCD11BD5664400E3BDE1 /* LaunchScreen.storyboard in Resources */,
 				3F0ACCCE1BD5664400E3BDE1 /* Assets.xcassets in Resources */,
-				3F0ACCCC1BD5664400E3BDE1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,14 +174,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3F0ACCCA1BD5664400E3BDE1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3F0ACCCB1BD5664400E3BDE1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3F0ACCCF1BD5664400E3BDE1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
