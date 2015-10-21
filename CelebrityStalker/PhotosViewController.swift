@@ -28,6 +28,7 @@ class PhotosViewController: UIViewController {
     let SAFE_SEARCH = "1"
     let DATA_FORMAT = "json"
     let NO_JSON_CALLBACK = "1"
+    let PER_PAGE = "500"
     
     
     
@@ -44,11 +45,11 @@ class PhotosViewController: UIViewController {
             "safe_search": SAFE_SEARCH,
             "extras": EXTRAS,
             "format": DATA_FORMAT,
-            "nojsoncallback": NO_JSON_CALLBACK
+            "nojsoncallback": NO_JSON_CALLBACK,
+            "per_page": PER_PAGE
         ]
         /* Call the Flickr API with these arguments */
         getImageFromFlickrByCelebrityName(methodArguments)
-        
         
     }
 
@@ -59,22 +60,25 @@ class PhotosViewController: UIViewController {
     
     
     @IBAction func getNextCelebrityPhoto(sender: AnyObject) {
+        randomSelectNextCelebrityPhoto()
+    }
+    
+    func randomSelectNextCelebrityPhoto() {
         
         let randomIndex = Int(arc4random_uniform(UInt32(celebrityPhotoArray.count)))
-        let myPhoto = celebrityPhotoArray[randomIndex] 
+        let myPhoto = celebrityPhotoArray[randomIndex]
         let myURL = myPhoto["url_m"] as! String
         
         let imageURL = NSURL(string: myURL)
         let photoTitle = myPhoto["title"] as? String
         
         if let imageData = NSData(contentsOfURL: imageURL!) {
-                self.photoTextDisplay.text =  photoTitle
-                self.celebrityPhotoDisplay.image = UIImage(data: imageData)
+            self.photoTextDisplay.text =  photoTitle
+            self.celebrityPhotoDisplay.image = UIImage(data: imageData)
             
         } else {
             print("Image does not exist at \(imageURL)")
         }
-        
         
     }
     
@@ -88,6 +92,7 @@ class PhotosViewController: UIViewController {
         
         /* 4 - Create the NSURLRequest using properly escaped URL */
         let urlString = BASE_URL + escapedParameters(methodArguments)
+        print(urlString)
         let url = NSURL(string: urlString)!
         let request = NSURLRequest(URL: url)
         
@@ -143,9 +148,8 @@ class PhotosViewController: UIViewController {
             
             // I'm assuming this is needed to properly update the class variable holding the photo array
             dispatch_async(dispatch_get_main_queue(), {
-                print("Success, setting celebrity photo array here...")
                 self.celebrityPhotoArray =  photoArray
-                
+                self.randomSelectNextCelebrityPhoto()
             })
             
             
