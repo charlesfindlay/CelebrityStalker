@@ -17,7 +17,7 @@ class PhotosViewController: UIViewController {
     @IBOutlet weak var photoTextDisplay: UILabel!
     
     var celebrityPhotoArray: [[String:AnyObject]] = []
-    
+    var myCelebrity = Celebrity(name: "")
     
     // MARK: - Globals
     
@@ -35,7 +35,8 @@ class PhotosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        celebrityNameLabel.text = "Lionel Ritchie"
+        let testCeleb = Celebrity(name: "James Franco")
+        myCelebrity = testCeleb
         
         // Hardcode the arguments
         let methodArguments: [String: String!] = [

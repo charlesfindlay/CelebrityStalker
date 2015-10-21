@@ -10,7 +10,6 @@ import UIKit
 
 class CelebrityTabBarController: UITabBarController {
     
-    
-    
+    let myCelebrity = Celebrity(name: "")
     
 }
