@@ -16,7 +16,7 @@ class PhotosViewController: UIViewController {
     
     @IBOutlet weak var photoTextDisplay: UILabel!
     
-    
+    var celebrityPhotoArray: [[String:AnyObject]] = []
     
     
     // MARK: - Globals
@@ -31,22 +31,11 @@ class PhotosViewController: UIViewController {
     
     
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         celebrityNameLabel.text = "Lionel Ritchie"
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    @IBAction func getNextCelebrityPhoto(sender: AnyObject) {
+        
         // Hardcode the arguments
         let methodArguments: [String: String!] = [
             "method": METHOD_NAME,
@@ -59,6 +48,34 @@ class PhotosViewController: UIViewController {
         ]
         /* Call the Flickr API with these arguments */
         getImageFromFlickrByCelebrityName(methodArguments)
+        
+        
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    @IBAction func getNextCelebrityPhoto(sender: AnyObject) {
+        
+        let randomIndex = Int(arc4random_uniform(UInt32(celebrityPhotoArray.count)))
+        let myPhoto = celebrityPhotoArray[randomIndex] 
+        let myURL = myPhoto["url_m"] as! String
+        
+        let imageURL = NSURL(string: myURL)
+        let photoTitle = myPhoto["title"] as? String
+        
+        if let imageData = NSData(contentsOfURL: imageURL!) {
+                self.photoTextDisplay.text =  photoTitle
+                self.celebrityPhotoDisplay.image = UIImage(data: imageData)
+            
+        } else {
+            print("Image does not exist at \(imageURL)")
+        }
+        
+        
     }
     
     
@@ -122,29 +139,15 @@ class PhotosViewController: UIViewController {
                 print("Cannot find keys 'photos' in \(parsedResult)")
                 return
             }
-            
-            print(photosDictionary)
             let photoArray = photosDictionary["photo"] as! [[String: AnyObject]]
-            let randomIndex = Int(arc4random_uniform(UInt32(photoArray.count)))
-            let myPhoto = photoArray[randomIndex] 
-            let myURL = myPhoto["url_m"] as! String
             
-            let imageURL = NSURL(string: myURL)
-            let photoTitle = myPhoto["title"] as? String
+            // I'm assuming this is needed to properly update the class variable holding the photo array
+            dispatch_async(dispatch_get_main_queue(), {
+                print("Success, setting celebrity photo array here...")
+                self.celebrityPhotoArray =  photoArray
+                
+            })
             
-            if let imageData = NSData(contentsOfURL: imageURL!) {
-                dispatch_async(dispatch_get_main_queue(), {
-                    print("Success, update the UI here...")
-                    self.photoTextDisplay.text =  "\(photoTitle)"
-                    self.photoTextDisplay.alpha = 0.0
-                    self.celebrityPhotoDisplay.image = UIImage(data: imageData)
-                    
-                    print(photoTitle)
-                    print(imageData)
-                })
-            } else {
-                print("Image does not exist at \(imageURL)")
-            }
             
         }
         
