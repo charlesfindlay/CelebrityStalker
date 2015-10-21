@@ -127,9 +127,24 @@ class PhotosViewController: UIViewController {
             let photoArray = photosDictionary["photo"] as! [[String: AnyObject]]
             let randomIndex = Int(arc4random_uniform(UInt32(photoArray.count)))
             let myPhoto = photoArray[randomIndex] 
-            let myURL = myPhoto["url_m"]
-            print(myURL)
-        
+            let myURL = myPhoto["url_m"] as! String
+            
+            let imageURL = NSURL(string: myURL)
+            let photoTitle = myPhoto["title"] as? String
+            
+            if let imageData = NSData(contentsOfURL: imageURL!) {
+                dispatch_async(dispatch_get_main_queue(), {
+                    print("Success, update the UI here...")
+                    self.photoTextDisplay.text =  "\(photoTitle)"
+                    self.photoTextDisplay.alpha = 0.0
+                    self.celebrityPhotoDisplay.image = UIImage(data: imageData)
+                    
+                    print(photoTitle)
+                    print(imageData)
+                })
+            } else {
+                print("Image does not exist at \(imageURL)")
+            }
             
         }
         
