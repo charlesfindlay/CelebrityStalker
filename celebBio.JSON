@@ -3,18 +3,18 @@
         {
             "name": "Adam Levine",
             "birthplace": "Los Angeles, CA",
-            "status": "Married",
+            "status": "Married"
             "birthday": "March 3, 1979",
-            
+            "website": "http:\\www.people.com\people\adam_levine\biography"
         },
 
         {
             "name": "Adele",
-            "realname": "Adele Laurie Blue Adkins",
+            "realname": "Adele Laurie Blue Adkins"
             "birthplace": "Tottenham, North London, UK",
-            "status": "Boyfriend",
+            "status": "Boyfriend"
             "birthday": "May 5, 1988",
-            
+            "website": "http:\\www.people.com\people\adele\biography"
         }
 
 

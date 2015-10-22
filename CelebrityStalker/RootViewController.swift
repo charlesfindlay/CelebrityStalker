@@ -12,12 +12,22 @@ import UIKit
 class RootViewController: UITableViewController, AddCelebrityViewControllerDelegate {
     
     var celebs:[Celebrity] = []
-    var selectedCeleb: Int?    
+    var selectedCeleb: Int?
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let parser = CelebrityJSONParser()
+        let celebJson = parser.parsedCelebrityJSON
+        print(celebJson.count)
+        let celebrities = celebJson["Celebrity"] as! NSArray
+        print(celebrities.count)
+        let test1 = celebrities[0]
+        print(test1["name"])
+        print(celebrities[1]["name"])
+        
         let celeb1 = Celebrity(name: "Brad Pitt")
         let celeb2 = Celebrity(name: "Lionel Richie")
         let celeb3 = Celebrity(name: "James Franco")

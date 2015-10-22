@@ -14,7 +14,8 @@
 		3F0ACCDA1BD56AF600E3BDE1 /* Celebrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0ACCD91BD56AF600E3BDE1 /* Celebrity.swift */; settings = {ASSET_TAGS = (); }; };
 		3F0ACCDD1BD56BD500E3BDE1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0ACCDC1BD56BD500E3BDE1 /* RootViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3F0ACCDF1BD575B100E3BDE1 /* AddCelebrityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0ACCDE1BD575B100E3BDE1 /* AddCelebrityViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		3F748BA51BD95A150004BCEC /* celebBio.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 3F748BA41BD95A150004BCEC /* celebBio.JSON */; settings = {ASSET_TAGS = (); }; };
+		3F748BA71BD968730004BCEC /* celebBio.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 3F748BA61BD968730004BCEC /* celebBio.JSON */; settings = {ASSET_TAGS = (); }; };
+		3F748BAB1BD969270004BCEC /* CelebrityJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F748BAA1BD969270004BCEC /* CelebrityJSONParser.swift */; settings = {ASSET_TAGS = (); }; };
 		3FFB72E51BD6C2F3000E3300 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB72E41BD6C2F3000E3300 /* PhotosViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3FFB72E71BD811C4000E3300 /* CelebrityTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB72E61BD811C4000E3300 /* CelebrityTabBarController.swift */; settings = {ASSET_TAGS = (); }; };
 		3FFB72E91BD9273B000E3300 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFB72E81BD9273B000E3300 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
@@ -30,7 +31,8 @@
 		3F0ACCD91BD56AF600E3BDE1 /* Celebrity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Celebrity.swift; sourceTree = "<group>"; };
 		3F0ACCDC1BD56BD500E3BDE1 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		3F0ACCDE1BD575B100E3BDE1 /* AddCelebrityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCelebrityViewController.swift; sourceTree = "<group>"; };
-		3F748BA41BD95A150004BCEC /* celebBio.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = celebBio.JSON; path = CelebrityStalker/celebBio.JSON; sourceTree = "<group>"; };
+		3F748BA61BD968730004BCEC /* celebBio.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = celebBio.JSON; sourceTree = "<group>"; };
+		3F748BAA1BD969270004BCEC /* CelebrityJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CelebrityJSONParser.swift; sourceTree = "<group>"; };
 		3FFB72E41BD6C2F3000E3300 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		3FFB72E61BD811C4000E3300 /* CelebrityTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CelebrityTabBarController.swift; sourceTree = "<group>"; };
 		3FFB72E81BD9273B000E3300 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../Downloads/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +52,6 @@
 		3F0ACCBA1BD5664400E3BDE1 = {
 			isa = PBXGroup;
 			children = (
-				3F748BA41BD95A150004BCEC /* celebBio.JSON */,
 				3FFB72E81BD9273B000E3300 /* Main.storyboard */,
 				3F0ACCC51BD5664400E3BDE1 /* CelebrityStalker */,
 				3F0ACCC41BD5664400E3BDE1 /* Products */,
@@ -68,12 +69,14 @@
 		3F0ACCC51BD5664400E3BDE1 /* CelebrityStalker */ = {
 			isa = PBXGroup;
 			children = (
+				3F748BA91BD969010004BCEC /* Utilities */,
 				3F0ACCDB1BD56B7C00E3BDE1 /* Controller */,
 				3F0ACCD81BD56AE200E3BDE1 /* Model */,
 				3F0ACCC61BD5664400E3BDE1 /* AppDelegate.swift */,
 				3F0ACCCD1BD5664400E3BDE1 /* Assets.xcassets */,
 				3F0ACCCF1BD5664400E3BDE1 /* LaunchScreen.storyboard */,
 				3F0ACCD21BD5664400E3BDE1 /* Info.plist */,
+				3F748BA81BD968800004BCEC /* Supporting Files */,
 			);
 			path = CelebrityStalker;
 			sourceTree = "<group>";
@@ -96,6 +99,22 @@
 				23ECEBC21BD8415000F5C74E /* BioViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		3F748BA81BD968800004BCEC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F748BA61BD968730004BCEC /* celebBio.JSON */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3F748BA91BD969010004BCEC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3F748BAA1BD969270004BCEC /* CelebrityJSONParser.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,7 +176,7 @@
 			files = (
 				3FFB72E91BD9273B000E3300 /* Main.storyboard in Resources */,
 				3F0ACCD11BD5664400E3BDE1 /* LaunchScreen.storyboard in Resources */,
-				3F748BA51BD95A150004BCEC /* celebBio.JSON in Resources */,
+				3F748BA71BD968730004BCEC /* celebBio.JSON in Resources */,
 				3F0ACCCE1BD5664400E3BDE1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +194,7 @@
 				3F0ACCDA1BD56AF600E3BDE1 /* Celebrity.swift in Sources */,
 				3F0ACCC71BD5664400E3BDE1 /* AppDelegate.swift in Sources */,
 				3F0ACCDD1BD56BD500E3BDE1 /* RootViewController.swift in Sources */,
+				3F748BAB1BD969270004BCEC /* CelebrityJSONParser.swift in Sources */,
 				3FFB72E51BD6C2F3000E3300 /* PhotosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
