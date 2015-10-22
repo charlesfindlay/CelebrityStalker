@@ -10,10 +10,12 @@ import Foundation
 
 class Celebrity {
     let name: String
+    var birthdate: String
     
     
     init(name: String) {
         self.name = name
+        self.birthdate = ""
     }
     
     
