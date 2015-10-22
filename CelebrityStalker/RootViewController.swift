@@ -8,10 +8,15 @@
 
 import UIKit
 
+protocol PickCelebrityToViewDelegate    {
+    func pickCelebrity(var myCelebrity: Celebrity)
+}
+
 class RootViewController: UITableViewController, AddCelebrityViewControllerDelegate {
     
     var celebs:[Celebrity] = []
     var selectedCeleb: Int?
+    var delegate: PickCelebrityToViewDelegate?
     
     
     
@@ -19,7 +24,7 @@ class RootViewController: UITableViewController, AddCelebrityViewControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         let celeb1 = Celebrity(name: "Brad Pitt")
-        let celeb2 = Celebrity(name: "Lionel Ritchie")
+        let celeb2 = Celebrity(name: "Lionel Richie")
         let celeb3 = Celebrity(name: "James Franco")
         celebs=[celeb1, celeb2, celeb3]
         
@@ -37,7 +42,6 @@ class RootViewController: UITableViewController, AddCelebrityViewControllerDeleg
 
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return celebs.count
     }
     
@@ -64,7 +68,13 @@ class RootViewController: UITableViewController, AddCelebrityViewControllerDeleg
         }
         if segue.identifier == "celebDetailsSegue"  {
             let vc = segue.destinationViewController as! CelebrityTabBarController
+            //vc.myCelebrity = Celebrity(name: "foo")
+//            let myCelebrity = celebs[selectedCeleb!]
+            
             vc.myCelebrity = celebs[selectedCeleb!]
+            
+//            delegate?.pickCelebrity(myCelebrity)
+            
         }
         
     }

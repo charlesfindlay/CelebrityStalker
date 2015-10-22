@@ -17,7 +17,7 @@ class PhotosViewController: UIViewController {
     @IBOutlet weak var photoTextDisplay: UILabel!
     
     var celebrityPhotoArray: [[String:AnyObject]] = []
-    var myCelebrity = Celebrity(name: "")
+    var myCelebrity = Celebrity?()
     
     // MARK: - Globals
     
@@ -37,16 +37,17 @@ class PhotosViewController: UIViewController {
         // Do any additional setup after loading the view.
 //        let testCeleb = Celebrity(name: "James Franco")
 //        myCelebrity = testCeleb
-        let tbvc = self.tabBarController as! CelebrityTabBarController
-        myCelebrity = tbvc.myCelebrity
+        let tbvc = self.tabBarController as? CelebrityTabBarController
+            myCelebrity = tbvc!.myCelebrity
+            celebrityNameLabel.text = myCelebrity!.name
+            print(myCelebrity?.name)
         
-        celebrityNameLabel.text = myCelebrity.name
         
         // Hardcode the arguments
         let methodArguments: [String: String!] = [
             "method": METHOD_NAME,
             "api_key": API_KEY,
-            "text": myCelebrity.name,
+            "text": "\(myCelebrity!.name)",
             "safe_search": SAFE_SEARCH,
             "extras": EXTRAS,
             "format": DATA_FORMAT,
@@ -70,8 +71,11 @@ class PhotosViewController: UIViewController {
     
     func randomSelectNextCelebrityPhoto() {
         
+        print(celebrityPhotoArray.count)
         let randomIndex = Int(arc4random_uniform(UInt32(celebrityPhotoArray.count)))
+        print(celebrityPhotoArray.count)
         let myPhoto = celebrityPhotoArray[randomIndex]
+        print(celebrityPhotoArray.count)
         let myURL = myPhoto["url_m"] as! String
         
         let imageURL = NSURL(string: myURL)
@@ -162,9 +166,6 @@ class PhotosViewController: UIViewController {
         
         task.resume()
     }
-
-    
-    
     
     
     // MARK: Escape HTML Parameters

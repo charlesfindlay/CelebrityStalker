@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		23ECEBC11BD825F800F5C74E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23ECEBC01BD825F800F5C74E /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		23ECEBC31BD8415000F5C74E /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECEBC21BD8415000F5C74E /* BioViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3F0ACCC71BD5664400E3BDE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0ACCC61BD5664400E3BDE1 /* AppDelegate.swift */; };
 		3F0ACCCE1BD5664400E3BDE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0ACCCD1BD5664400E3BDE1 /* Assets.xcassets */; };
 		3F0ACCD11BD5664400E3BDE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F0ACCCF1BD5664400E3BDE1 /* LaunchScreen.storyboard */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		23ECEBC01BD825F800F5C74E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../Downloads/Main.storyboard; sourceTree = "<group>"; };
+		23ECEBC21BD8415000F5C74E /* BioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 		3F0ACCC31BD5664400E3BDE1 /* CelebrityStalker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CelebrityStalker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F0ACCC61BD5664400E3BDE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F0ACCCD1BD5664400E3BDE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				3F0ACCDE1BD575B100E3BDE1 /* AddCelebrityViewController.swift */,
 				3FFB72E41BD6C2F3000E3300 /* PhotosViewController.swift */,
 				3FFB72E61BD811C4000E3300 /* CelebrityTabBarController.swift */,
+				23ECEBC21BD8415000F5C74E /* BioViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23ECEBC31BD8415000F5C74E /* BioViewController.swift in Sources */,
 				3FFB72E71BD811C4000E3300 /* CelebrityTabBarController.swift in Sources */,
 				3F0ACCDF1BD575B100E3BDE1 /* AddCelebrityViewController.swift in Sources */,
 				3F0ACCDA1BD56AF600E3BDE1 /* Celebrity.swift in Sources */,
