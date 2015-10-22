@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BioViewController: UIViewController, PickCelebrityToViewDelegate {
+class BioViewController: UIViewController {
     
     var myCelebrity = Celebrity?()
 

@@ -34,13 +34,10 @@ class PhotosViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-//        let testCeleb = Celebrity(name: "James Franco")
-//        myCelebrity = testCeleb
+
         let tbvc = self.tabBarController as? CelebrityTabBarController
             myCelebrity = tbvc!.myCelebrity
             celebrityNameLabel.text = myCelebrity!.name
-            print(myCelebrity?.name)
         
         
         // Hardcode the arguments
@@ -71,11 +68,8 @@ class PhotosViewController: UIViewController {
     
     func randomSelectNextCelebrityPhoto() {
         
-        print(celebrityPhotoArray.count)
         let randomIndex = Int(arc4random_uniform(UInt32(celebrityPhotoArray.count)))
-        print(celebrityPhotoArray.count)
         let myPhoto = celebrityPhotoArray[randomIndex]
-        print(celebrityPhotoArray.count)
         let myURL = myPhoto["url_m"] as! String
         
         let imageURL = NSURL(string: myURL)
@@ -101,7 +95,6 @@ class PhotosViewController: UIViewController {
         
         /* 4 - Create the NSURLRequest using properly escaped URL */
         let urlString = BASE_URL + escapedParameters(methodArguments)
-        print(urlString)
         let url = NSURL(string: urlString)!
         let request = NSURLRequest(URL: url)
         

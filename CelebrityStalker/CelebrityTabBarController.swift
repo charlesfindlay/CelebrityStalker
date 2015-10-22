@@ -8,16 +8,9 @@
 
 import UIKit
 
-class CelebrityTabBarController: UITabBarController, PickCelebrityToViewDelegate {
+class CelebrityTabBarController: UITabBarController {
     
     var myCelebrity = Celebrity?()
     
-//    let tbvc = RootViewController()
-    
-    
-    func pickCelebrity(myCelebrity: Celebrity) {
-        self.myCelebrity = myCelebrity
-        print(myCelebrity.name)
-    }
     
 }

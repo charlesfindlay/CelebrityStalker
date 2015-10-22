@@ -8,16 +8,11 @@
 
 import UIKit
 
-protocol PickCelebrityToViewDelegate    {
-    func pickCelebrity(var myCelebrity: Celebrity)
-}
 
 class RootViewController: UITableViewController, AddCelebrityViewControllerDelegate {
     
     var celebs:[Celebrity] = []
-    var selectedCeleb: Int?
-    var delegate: PickCelebrityToViewDelegate?
-    
+    var selectedCeleb: Int?    
     
     
 
@@ -68,12 +63,8 @@ class RootViewController: UITableViewController, AddCelebrityViewControllerDeleg
         }
         if segue.identifier == "celebDetailsSegue"  {
             let vc = segue.destinationViewController as! CelebrityTabBarController
-            //vc.myCelebrity = Celebrity(name: "foo")
-//            let myCelebrity = celebs[selectedCeleb!]
             
             vc.myCelebrity = celebs[selectedCeleb!]
-            
-//            delegate?.pickCelebrity(myCelebrity)
             
         }
         
