@@ -21,8 +21,8 @@ class RootViewController: UITableViewController, AddCelebrityViewControllerDeleg
         let celeb1 = Celebrity(name: "Brad Pitt")
         let celeb2 = Celebrity(name: "Lionel Richie")
         let celeb3 = Celebrity(name: "James Franco")
+        celeb3.birthdate = "April 19, 1978"
         celebs=[celeb1, celeb2, celeb3]
-        
 
     }
 

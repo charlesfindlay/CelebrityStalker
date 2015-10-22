@@ -10,31 +10,34 @@ import UIKit
 
 class BioViewController: UIViewController {
     
+    
+    @IBOutlet weak var celebrityNameLabel: UILabel!
+    @IBOutlet weak var birthdayLabel: UILabel!
+    
+    
     var myCelebrity = Celebrity?()
 
-    @IBOutlet weak var testLabel: UILabel!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // print(myCelebrity!.name)
         
+        let tbvc = self.tabBarController as? CelebrityTabBarController
+        myCelebrity = tbvc!.myCelebrity
+        
+        celebrityNameLabel.text = myCelebrity?.name
+        birthdayLabel.text = myCelebrity?.birthdate
 
-        // Do any additional setup after loading the view.
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    @IBAction func editCelebrityDetails(sender: AnyObject) {
     }
     
-    @IBAction func testButton(sender: AnyObject) {
-        testLabel.text = myCelebrity!.name
-    }
     
-    func pickCelebrity(myCelebrity: Celebrity) {
-        self.myCelebrity = myCelebrity
-        print(myCelebrity.name)
-    }
+    
 
 }
