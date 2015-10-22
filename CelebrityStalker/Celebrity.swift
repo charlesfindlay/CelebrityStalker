@@ -10,6 +10,7 @@ import Foundation
 
 class Celebrity {
     let name: String
+    var realName = "same"
     var birthdate: String
     var birthplace: String
     var maritalStatus: String
