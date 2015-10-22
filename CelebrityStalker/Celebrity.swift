@@ -10,12 +10,20 @@ import Foundation
 
 class Celebrity {
     let name: String
+    var realName = "same"
     var birthdate: String
+    var birthplace: String
+    var maritalStatus: String
+    var bioSource: String
+    var videoIDArray = [String?](count: 5, repeatedValue: nil)
     
     
     init(name: String) {
         self.name = name
         self.birthdate = ""
+        self.birthplace = ""
+        self.maritalStatus = ""
+        self.bioSource = ""
     }
     
     
