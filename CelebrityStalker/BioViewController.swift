@@ -12,7 +12,7 @@ class BioViewController: UIViewController {
     
     
     @IBOutlet weak var celebrityNameLabel: UILabel!
-    @IBOutlet weak var birthdayLabel: UILabel!
+    @IBOutlet weak var birthdayLabel: UITextField!
     
     
     var myCelebrity = Celebrity?()
@@ -34,7 +34,9 @@ class BioViewController: UIViewController {
 
     
     
-    @IBAction func editCelebrityDetails(sender: AnyObject) {
+    @IBAction func saveChangesButton(sender: AnyObject) {
+        myCelebrity?.birthdate = birthdayLabel.text!
+        
     }
     
     
