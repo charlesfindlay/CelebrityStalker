@@ -18,6 +18,7 @@
 		3FFB72E71BD811C4000E3300 /* CelebrityTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB72E61BD811C4000E3300 /* CelebrityTabBarController.swift */; settings = {ASSET_TAGS = (); }; };
 		3FFB72E91BD9273B000E3300 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFB72E81BD9273B000E3300 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 		3FFB72EB1BD93342000E3300 /* EditCelebrityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB72EA1BD93342000E3300 /* EditCelebrityDetailsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A1C9FAA21BD9369300161C68 /* celebBio.JSON in Resources */ = {isa = PBXBuildFile; fileRef = A1C9FAA11BD9369300161C68 /* celebBio.JSON */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		3FFB72E61BD811C4000E3300 /* CelebrityTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CelebrityTabBarController.swift; sourceTree = "<group>"; };
 		3FFB72E81BD9273B000E3300 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../Downloads/Main.storyboard; sourceTree = "<group>"; };
 		3FFB72EA1BD93342000E3300 /* EditCelebrityDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCelebrityDetailsViewController.swift; sourceTree = "<group>"; };
+		A1C9FAA11BD9369300161C68 /* celebBio.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = celebBio.JSON; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		3F0ACCC51BD5664400E3BDE1 /* CelebrityStalker */ = {
 			isa = PBXGroup;
 			children = (
+				A1C9FAA11BD9369300161C68 /* celebBio.JSON */,
 				3F0ACCDB1BD56B7C00E3BDE1 /* Controller */,
 				3F0ACCD81BD56AE200E3BDE1 /* Model */,
 				3F0ACCC61BD5664400E3BDE1 /* AppDelegate.swift */,
@@ -157,6 +160,7 @@
 			files = (
 				3FFB72E91BD9273B000E3300 /* Main.storyboard in Resources */,
 				3F0ACCD11BD5664400E3BDE1 /* LaunchScreen.storyboard in Resources */,
+				A1C9FAA21BD9369300161C68 /* celebBio.JSON in Resources */,
 				3F0ACCCE1BD5664400E3BDE1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
