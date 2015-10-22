@@ -12,5 +12,4 @@ class CelebrityTabBarController: UITabBarController {
     
     var myCelebrity = Celebrity?()
     
-    
 }

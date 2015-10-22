@@ -12,8 +12,7 @@ import UIKit
 class RootViewController: UITableViewController, AddCelebrityViewControllerDelegate {
     
     var celebs:[Celebrity] = []
-    var selectedCeleb: Int?    
-    
+    var selectedCeleb: Int?
     
 
     override func viewDidLoad() {
@@ -23,15 +22,13 @@ class RootViewController: UITableViewController, AddCelebrityViewControllerDeleg
         let celeb3 = Celebrity(name: "James Franco")
         celeb3.birthdate = "April 19, 1978"
         celebs=[celeb1, celeb2, celeb3]
-
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    
     
     // MARK: - Table view data source
 
