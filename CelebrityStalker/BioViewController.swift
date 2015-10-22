@@ -13,6 +13,9 @@ class BioViewController: UIViewController {
     
     @IBOutlet weak var celebrityNameLabel: UILabel!
     @IBOutlet weak var birthdayLabel: UITextField!
+    @IBOutlet weak var birthPlaceLabel: UITextField!
+    @IBOutlet weak var realNameLabel: UITextField!
+    @IBOutlet weak var maritalStatusLabel: UITextField!
     
     
     var myCelebrity = Celebrity?()
@@ -27,7 +30,10 @@ class BioViewController: UIViewController {
         myCelebrity = tbvc!.myCelebrity
         
         celebrityNameLabel.text = myCelebrity?.name
+        realNameLabel.text = myCelebrity?.realName
         birthdayLabel.text = myCelebrity?.birthdate
+        birthPlaceLabel.text = myCelebrity?.birthplace
+        maritalStatusLabel.text = myCelebrity?.maritalStatus
 
 
     }
@@ -35,8 +41,10 @@ class BioViewController: UIViewController {
     
     
     @IBAction func saveChangesButton(sender: AnyObject) {
+        myCelebrity?.realName = realNameLabel.text!
         myCelebrity?.birthdate = birthdayLabel.text!
-        
+        myCelebrity?.birthplace = birthPlaceLabel.text!
+        myCelebrity?.maritalStatus = maritalStatusLabel.text!
     }
     
     
