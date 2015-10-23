@@ -23,10 +23,13 @@ class RootViewController: UITableViewController, AddCelebrityViewControllerDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //set the parsed information as the Dictionary 
+        //we will use this pass the information into a few methods
         newDictionary = setParseData()
 
-        
+        // for each key, value pair in the dictionary
+        // instantiate a new celebrity and pass that celebrity object
+        // to the method that will append it to our array of celbrities
         for (key, _) in newDictionary {
             let thisCeleb = key
             print(thisCeleb)
@@ -43,7 +46,6 @@ class RootViewController: UITableViewController, AddCelebrityViewControllerDeleg
 
     
     @IBAction func beginEditingCelebrityList(sender: AnyObject) {
-        
         // This code will function as a toggle switch to turn editing capability on or off.
         if tableView.editing == true {
             tableView.setEditing(false, animated: true)
@@ -121,7 +123,6 @@ class RootViewController: UITableViewController, AddCelebrityViewControllerDeleg
         }
         if segue.identifier == "celebDetailsSegue"  {
             let vc = segue.destinationViewController as! CelebrityTabBarController
-            
             vc.myCelebrity = celebs[selectedCeleb!]
             
         }
