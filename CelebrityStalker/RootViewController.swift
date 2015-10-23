@@ -11,7 +11,10 @@ import UIKit
 
 class RootViewController: UITableViewController, AddCelebrityViewControllerDelegate {
     
+
+    
     @IBOutlet weak var reorderButton: UIBarButtonItem!
+    
     
     var celebs:[Celebrity] = []
     var selectedCeleb: Int?
@@ -24,7 +27,7 @@ class RootViewController: UITableViewController, AddCelebrityViewControllerDeleg
         newDictionary = setParseData()
 
         
-        for (key, value) in newDictionary {
+        for (key, _) in newDictionary {
             let thisCeleb = key
             print(thisCeleb)
             let eachCeleb = Celebrity(name: thisCeleb as! String)
