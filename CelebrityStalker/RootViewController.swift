@@ -13,24 +13,18 @@ class RootViewController: UITableViewController, AddCelebrityViewControllerDeleg
     
     var celebs:[Celebrity] = []
     var selectedCeleb: Int?
-    
+    var newDictionary = NSDictionary()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let parser = CelebrityJSONParser()
-        let celebJson = parser.parsedCelebrityJSON
-        print(celebJson.count)
-        let celebrities = celebJson["Celebrity"] as! NSArray
-        print(celebrities.count)
-        let test1 = celebrities[0]
-        print(test1["name"])
-        print(celebrities[1]["name"])
+        newDictionary = setParseData()
         
         let celeb1 = Celebrity(name: "Brad Pitt")
         let celeb2 = Celebrity(name: "Lionel Richie")
         let celeb3 = Celebrity(name: "James Franco")
+       // let celeb4 = Celebrity(name: <#T##String#>)
         celeb3.birthdate = "April 19, 1978"
         celebs=[celeb1, celeb2, celeb3]
 
@@ -84,8 +78,32 @@ class RootViewController: UITableViewController, AddCelebrityViewControllerDeleg
     
     func sendCelebrity(name: String) {
         let newCeleb = Celebrity(name: name)
-        celebs.append(newCeleb)
+        //call function that builds rest of celebrity properties from parsed data
+        let updatedCeleb = searchParsedData(newDictionary, searchTerm: newCeleb)
+        celebs.append(updatedCeleb)
         tableView.reloadData()
+    }
+    
+    func setParseData() -> NSDictionary {
+        let parser = CelebrityJSONParser()
+        let celebJson = parser.parsedCelebrityJSON
+        print(celebJson.count)
+        
+        return celebJson
+    }
+    
+    func searchParsedData(dict: NSDictionary, searchTerm: Celebrity) -> Celebrity {
+        for (key,value)in dict {
+            if key as! String == searchTerm.name {
+                searchTerm.realName = value["realname"] as! String
+                searchTerm.birthplace = value["birthplace"] as! String
+                searchTerm.birthdate = value["birthday"] as! String
+                searchTerm.maritalStatus = value["status"] as! String
+                
+            }
+        }
+        return searchTerm
+        
     }
     
     

@@ -1,23 +1,21 @@
-{ "Celebrity":
-    [
-        {
-            "name": "Adam Levine",
-            "birthplace": "Los Angeles, CA",
-            "status": "Married",
-            "birthday": "March 3, 1979",
-            
-        },
+{
+    "Adam Levine":  {
+    "realname": "same",
+    "birthplace": "Los Angeles, CA",
+    "status": "Married",
+    "birthday": "March 3, 1979"
+    }
+,
 
-        {
-            "name": "Adele",
-            "realname": "Adele Laurie Blue Adkins",
-            "birthplace": "Tottenham, North London, UK",
-            "status": "Boyfriend",
-            "birthday": "May 5, 1988",
-            
-        }
-
-
-    ]
+    "Adele":        {
+    "realname": "Adele Laurie Blue Adkins",
+    "birthplace": "Tottenham, North London, UK",
+    "status": "Boyfriend",
+    "birthday": "May 5, 1988"
+    }
+    
+    
 
 }
+
+
