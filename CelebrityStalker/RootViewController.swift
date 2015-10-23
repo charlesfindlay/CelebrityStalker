@@ -21,6 +21,14 @@ class RootViewController: UITableViewController, AddCelebrityViewControllerDeleg
         
         newDictionary = setParseData()
 
+        
+        for (key, value) in newDictionary {
+            let thisCeleb = key
+            print(thisCeleb)
+            let eachCeleb = Celebrity(name: thisCeleb as! String)
+            populateCelebsArray(eachCeleb)
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,9 +79,13 @@ class RootViewController: UITableViewController, AddCelebrityViewControllerDeleg
     
     func sendCelebrity(name: String) {
         let newCeleb = Celebrity(name: name)
-        //call function that builds rest of celebrity properties from parsed data
-        let updatedCeleb = searchParsedData(newDictionary, searchTerm: newCeleb)
-        celebs.append(updatedCeleb)
+        celebs.append(newCeleb)
+        tableView.reloadData()
+    }
+    
+    func populateCelebsArray(celeb: Celebrity) {
+        let eachCeleb = searchParsedData(newDictionary, searchTerm: celeb)
+        celebs.append(eachCeleb)
         tableView.reloadData()
     }
     
@@ -93,7 +105,6 @@ class RootViewController: UITableViewController, AddCelebrityViewControllerDeleg
                 searchTerm.birthdate = value["birthday"] as! String
                 searchTerm.maritalStatus = value["status"] as! String
                 searchTerm.videoID = value["videoID"] as! String
-                
             }
         }
         return searchTerm
