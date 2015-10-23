@@ -1,17 +1,203 @@
 {
     "Adam Levine":  {
-    "realname": "same",
-    "birthplace": "Los Angeles, CA",
-    "status": "Married",
-    "birthday": "March 3, 1979"
+        "realname": "same",
+        "birthplace": "Los Angeles, CA",
+        "status": "Married",
+        "birthday": "March 3, 1979",
+        "videoID": "09R8_2nJtjg"
     }
 ,
 
     "Adele":        {
-    "realname": "Adele Laurie Blue Adkins",
-    "birthplace": "Tottenham, North London, UK",
-    "status": "Boyfriend",
-    "birthday": "May 5, 1988"
+        "realname": "Adele Laurie Blue Adkins",
+        "birthplace": "Tottenham, North London, UK",
+        "status": "Boyfriend",
+        "birthday": "May 5, 1988",
+        "videoID": "hLQl3WQQoQ0"
+    }
+,
+    "Alexander Skarsgard":        {
+        "realname": "same",
+        "birthplace": "Stockholm, Sweden",
+        "status": "Single",
+        "birthday": "1976-08-25",
+        "videoID": "O0GYSa_z-nk"
+    }
+,
+    "Ali Larter":        {
+        "realname": "same",
+        "birthplace": "Cherry Hill, N.J.",
+        "status": "Married",
+        "birthday": "1976-02-28",
+        "videoID": "svWoHz8syzo"
+    }
+,
+    "Alicia Keys":        {
+        "realname": "Alicia Augello Cook",
+        "birthplace": "New York, N.Y.",
+        "status": "Married",
+        "birthday": "1980-01-25",
+        "videoID": "Okn0WpJqgHE"
+    }
+,
+    "Amanda Bynes":        {
+        "realname": "same",
+        "birthplace": "Thousand Oaks, CA",
+        "status": "Single",
+        "birthday": "1986-04-03",
+        "videoID": "5ewLYaWmTZs"
+    }
+,
+    "Amanda Seyfried":        {
+        "realname": "same",
+        "birthplace": "Allentown, PA",
+        "status": "Boyfriend",
+        "birthday": "1985-12-03",
+        "videoID": "JvTEHb-vtAo"
+    }
+,
+    "America Ferrera":        {
+        "realname": "same",
+        "birthplace": "Los Angeles, CA",
+        "status": "Married",
+        "birthday": "1984-04-18",
+        "videoID": "0JOEs7wANUs"
+    }
+,
+    "Amy Adams":        {
+        "realname": "same",
+        "birthplace": "Pordenone, Italy",
+        "status": "Engaged",
+        "birthday": "1974-08-20",
+        "videoID": "w3eVBzB4AcI"
+    }
+,
+    "Amy Winehouse":        {
+        "realname": "same",
+        "birthplace": "London, England",
+        "status": "NA",
+        "birthday": "1983-09-14",
+        "videoID": "KUmZp8pR1uc"
+    }
+,
+    "Andrew Garfield":        {
+        "realname": "same",
+        "birthplace": "Los Angeles, CA",
+        "status": "Girlfriend",
+        "birthday": "1983-08-20",
+        "videoID": "yWbMeyYeUXw"
+    }
+,
+    "Angelina Jolie":        {
+        "realname": "same",
+        "birthplace": "Los Angeles, CA",
+        "status": "Married",
+        "birthday": "1975-06-04",
+        "videoID": "s1Vh1mAW8b4"
+    }
+,
+    "Anna Nicole Smith":        {
+        "realname": "Vicky Lynn Hogan",
+        "birthplace": "Mexia, Texas",
+        "status": "NA",
+        "birthday": "1967-11-28",
+        "videoID": "B_BWJrhib3c"
+    }
+,
+    "Anna Paquin":        {
+        "realname": "same",
+        "birthplace": "Winnipeg, MB, Canada",
+        "status": "Married",
+        "birthday": "1982-07-24",
+        "videoID": "PnDJzOQCN6A"
+    }
+,
+    "Anne Hathaway":        {
+        "realname": "same",
+        "birthplace": "Brooklyn, N.Y.",
+        "status": "Married",
+        "birthday": "1982-11-12",
+        "videoID": "5SZfznYgToc"
+    }
+,
+    "Ashlee Simpson":        {
+        "realname": "same",
+        "birthplace": "Waco, Texas",
+        "status": "Married",
+        "birthday": "1984-10-03",
+        "videoID": "WJCsyLUCSXI"
+    }
+,
+    "Ashley Greene":        {
+        "realname": "same",
+        "birthplace": "Jacksonville, FL",
+        "status": "Married",
+        "birthday": "1987-02-21",
+        "videoID": "O7VbE9weG9E"
+    }
+,
+    "Ashley Olsen":        {
+        "realname": "same",
+        "birthplace": "Sherman Oaks, CA",
+        "status": "Single",
+        "birthday": "1986-06-13",
+        "videoID": "APshm-9gPgI"
+    }
+,
+    "Ashley Tisdale":        {
+        "realname": "same",
+        "birthplace": "West Deal, N.J.",
+        "status": "Married",
+        "birthday": "1985-07-02",
+        "videoID": "4sTHw7HEfHo"
+    }
+,
+    "Ashton Kutcher":        {
+        "realname": "Christopher Ashton Kutcher",
+        "birthplace": "Cedar Rapids, Iowa",
+        "status": "Engaged",
+        "birthday": "1978-02-07",
+        "videoID": "Y1sD1xERFRo"
+    }
+,
+    "Audrina Patridge":        {
+        "realname": "same",
+        "birthplace": "Los Angeles, CA",
+        "status": "Complicated",
+        "birthday": "1985-05-09",
+        "videoID": "xng_lYm4HsY"
+    }
+,
+    "Avril Lavigne":        {
+        "realname": "same",
+        "birthplace": "Belleville, Ontario, Canada",
+        "status": "Married",
+        "birthday": "1984-09-27",
+        "videoID": "sXd2WxoOP5g"
+    }
+,
+    "Brad Pitt":        {
+        "realname": "William Bradley Pitt",
+        "birthplace": "Shawnee, OK",
+        "status": "Married",
+        "birthday": "1963-12-18",
+        "videoID": "D9eJ9I1Cc7I"
+    }
+    ,
+    "James Franco":        {
+        "realname": "same",
+        "birthplace": "Palo Alto, CA",
+        "status": "Waiting for Kate",
+        "birthday": "1978-04-19",
+        "videoID": "_OLFD-hKXOk"
+    }
+    ,
+    "Lionel Richie":        {
+        "realname": "Lionel Brockman Richie",
+        "birthplace": "Tuskegee, AL",
+        "status": "Single",
+        "birthday": "1949-06-20",
+        "videoID": "PDZcqBgCS74"
     }
     
     

@@ -20,13 +20,6 @@ class RootViewController: UITableViewController, AddCelebrityViewControllerDeleg
         super.viewDidLoad()
         
         newDictionary = setParseData()
-        
-        let celeb1 = Celebrity(name: "Brad Pitt")
-        let celeb2 = Celebrity(name: "Lionel Richie")
-        let celeb3 = Celebrity(name: "James Franco")
-       // let celeb4 = Celebrity(name: <#T##String#>)
-        celeb3.birthdate = "April 19, 1978"
-        celebs=[celeb1, celeb2, celeb3]
 
     }
 
@@ -99,6 +92,7 @@ class RootViewController: UITableViewController, AddCelebrityViewControllerDeleg
                 searchTerm.birthplace = value["birthplace"] as! String
                 searchTerm.birthdate = value["birthday"] as! String
                 searchTerm.maritalStatus = value["status"] as! String
+                searchTerm.videoID = value["videoID"] as! String
                 
             }
         }

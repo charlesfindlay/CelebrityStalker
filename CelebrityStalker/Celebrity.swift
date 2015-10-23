@@ -15,7 +15,7 @@ class Celebrity {
     var birthplace: String
     var maritalStatus: String
     var bioSource: String
-    var videoIDArray = [String?](count: 5, repeatedValue: nil)
+    var videoID: String
     
     
     init(name: String) {
@@ -24,6 +24,7 @@ class Celebrity {
         self.birthplace = ""
         self.maritalStatus = ""
         self.bioSource = ""
+        self.videoID = ""
     }
     
     
